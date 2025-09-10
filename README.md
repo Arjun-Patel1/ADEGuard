@@ -30,6 +30,8 @@ target.npy- https://drive.google.com/file/d/1XTS5ZBr5l4KJhADnG5bDeqIEwPdaKaNu/vi
 tdidf_vectoriser.pkl- https://drive.google.com/file/d/1CEDaYrqeeJD8o14YSIhGB2918mTZ_-ON/view?usp=sharing
 logreg_model.pkl- https://drive.google.com/file/d/1XaM7cGsTN8Tntg-o8cjHn3tRB4S7SCJy/view?usp=sharing
 feature_sparse.npz- https://drive.google.com/file/d/1FF33EWX2ku26-usQPtCgr8TziIdR7npE/view?usp=sharing
+sbert minilm npy - https://drive.google.com/file/d/1VQSL_OsobTMjGh6wbhzxSJWwRcC2kgoE/view?usp=sharing
+
 ## 📦 Installation
 ```bash
 git clone https://github.com/yourusername/ADEGuard.git
