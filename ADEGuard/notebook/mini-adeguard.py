@@ -6,12 +6,22 @@ from sklearn.decomposition import PCA
 from sentence_transformers import SentenceTransformer, util
 import re
 import joblib
-
 @st.cache_data
 def load_data():
-    df = pd.read_csv("vaers_data_30k.csv")
-    embeddings = np.load("mini-sbert_minilm_embeddings_split.npy")
+    try:
+        df = pd.read_csv("vaers_data_30k.csv")
+    except FileNotFoundError:
+        st.error("❌ 'vaers_data_30k.csv' not found. Please upload it to the same directory as this script.")
+        st.stop()
+
+    try:
+        embeddings = np.load("mini-sbert_minilm_embeddings_split.npy")
+    except FileNotFoundError:
+        st.error("❌ 'mini-sbert_minilm_embeddings_split.npy' not found. Please upload it to the same directory.")
+        st.stop()
+
     return df, embeddings
+
 
 @st.cache_resource
 def load_model():
