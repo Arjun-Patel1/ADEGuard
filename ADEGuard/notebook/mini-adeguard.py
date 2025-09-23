@@ -9,7 +9,7 @@ import joblib
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv("https://drive.google.com/file/d/19XTgUeWQuD0IvSwS75xNe6QJae0xiIEj/view?usp=sharing")
+        df = pd.read_csv("vaers_data_30k.csv")
     except FileNotFoundError:
         st.error("❌ 'vaers_data_30k.csv' not found. Please upload it to the same directory as this script.")
         st.stop()
