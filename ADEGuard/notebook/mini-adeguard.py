@@ -6,27 +6,41 @@ from sklearn.decomposition import PCA
 from sentence_transformers import SentenceTransformer, util
 import re
 import joblib
+import os
+
 @st.cache_data
 def load_data():
+    base_path = os.path.dirname(__file__)
+    csv_path = os.path.join(base_path, "vaers_data_30k.csv")
+    emb_path = os.path.join(base_path, "mini-sbert_minilm_embeddings_split.npy")
+
     try:
-        df = pd.read_csv("vaers_data_30k.csv")
-    except FileNotFoundError:
-        st.error("❌ 'vaers_data_30k.csv' not found. Please upload it to the same directory as this script.")
+        df = pd.read_csv(csv_path, on_bad_lines='skip')
+    except Exception as e:
+        st.error(f"❌ Failed to load CSV: {e}")
         st.stop()
 
     try:
-        embeddings = np.load("mini-sbert_minilm_embeddings_split.npy")
-    except FileNotFoundError:
-        st.error("❌ 'mini-sbert_minilm_embeddings_split.npy' not found. Please upload it to the same directory.")
+        embeddings = np.load(emb_path)
+    except Exception as e:
+        st.error(f"❌ Failed to load embeddings: {e}")
         st.stop()
 
     return df, embeddings
 
-
 @st.cache_resource
 def load_model():
-    vectorizer = joblib.load("mini-tfidf_vectorizer.pkl")
-    model = joblib.load("mini-logreg_model.pkl")
+    base_path = os.path.dirname(__file__)
+    vec_path = os.path.join(base_path, "mini-tfidf_vectorizer.pkl")
+    model_path = os.path.join(base_path, "mini-logreg_model.pkl")
+
+    try:
+        vectorizer = joblib.load(vec_path)
+        model = joblib.load(model_path)
+    except Exception as e:
+        st.error(f"❌ Failed to load model: {e}")
+        st.stop()
+
     return vectorizer, model
 
 df, embeddings = load_data()
