@@ -1,3 +1,5 @@
+# live working App
+https://adeguard-nvvthuefjkvbvgjdru2yh6.streamlit.app/
 # 📌 Problem Statement
 
 Monitoring adverse drug events (ADEs) is a critical task in public health and pharmacovigilance.
@@ -58,7 +60,8 @@ Designed a Streamlit app with three main modules:
 🚀 Deployment
 
 Hosted on Streamlit Cloud for interactive, real-time access
-📸 Screenshots
+
+### 📸 Screenshots
 
 Home Dashboard
 ![8abed9db-f929-4bc0-9a16-5f1d1b878b30](https://github.com/user-attachments/assets/11281a19-f3fa-4ae1-8e27-5ee81ee11b25)
@@ -72,7 +75,7 @@ PCA Visualization
 Semantic Search
 ![b5106a93-f029-4725-a5e6-de13534a649c](https://github.com/user-attachments/assets/142f37cf-ccaf-441a-a621-b7450f20352a)
 
-🚀 Run on Your Machine
+# 🚀 Run on Your Machine
 # Clone repo
 git clone https://github.com/<your-username>/ADEGuard.git
 cd ADEGuard/notebook
