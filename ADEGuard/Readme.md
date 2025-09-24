@@ -1,4 +1,4 @@
-#📌 Problem Statement
+📌 Problem Statement
 
 Monitoring adverse drug events (ADEs) is a critical task in public health and pharmacovigilance.
 The VAERS (Vaccine Adverse Event Reporting System) dataset contains 1.2M+ reports from the last 5 years. While this data is rich, its scale introduces key challenges:
@@ -27,26 +27,27 @@ Mini-ADEGuard addresses these challenges by transforming raw VAERS data into an 
 The original project was built on the complete 1.2M+ records.
 
 ⚙️ Workflow
+🗂️ Data Preparation
 
-Data Preparation
+Cleaned VAERS dataset
 
-Cleaned VAERS dataset and sampled 50k rows for training and deployment
+Sampled 50k rows for training and deployment
 
-Feature Engineering
+🛠️ Feature Engineering
 
 Generated text embeddings with SBERT MiniLM (384 dimensions)
 
 Built sparse TF-IDF vectors for classification tasks
 
-Model Training
+🤖 Model Training
 
 Trained a Logistic Regression classifier to predict ADE severity
 
-Saved embeddings for fast semantic similarity search
+Stored embeddings for fast semantic similarity search
 
-App Development
+💻 App Development
 
-Designed a Streamlit app with three key modules:
+Designed a Streamlit app with three main modules:
 
 📊 Dataset Preview
 
@@ -54,10 +55,9 @@ Designed a Streamlit app with three key modules:
 
 🔍 Semantic Search
 
-Deployment
+🚀 Deployment
 
 Hosted on Streamlit Cloud for interactive, real-time access
-
 📸 Screenshots
 
 Home Dashboard
