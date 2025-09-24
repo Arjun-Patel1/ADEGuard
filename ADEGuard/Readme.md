@@ -1,4 +1,4 @@
-📌 Problem Statement
+#📌 Problem Statement
 
 Monitoring adverse drug events (ADEs) is a critical task in public health and pharmacovigilance.
 The VAERS (Vaccine Adverse Event Reporting System) dataset contains 1.2M+ reports from the last 5 years. While this data is rich, its scale introduces key challenges:
