@@ -1,4 +1,4 @@
-📌 Problem Statement
+# 📌 Problem Statement
 
 Monitoring adverse drug events (ADEs) is a critical task in public health and pharmacovigilance.
 The VAERS (Vaccine Adverse Event Reporting System) dataset contains 1.2M+ reports from the last 5 years. While this data is rich, its scale introduces key challenges:
@@ -11,7 +11,7 @@ The VAERS (Vaccine Adverse Event Reporting System) dataset contains 1.2M+ report
 
 Mini-ADEGuard addresses these challenges by transforming raw VAERS data into an interactive, searchable, and explainable web application.
 
-🎯 What the Project Does
+## 🎯 What the Project Does
 
 🔍 Semantic Search → retrieve similar adverse events using SBERT embeddings
 
@@ -26,7 +26,7 @@ Mini-ADEGuard addresses these challenges by transforming raw VAERS data into an 
 ⚡ For reproducibility on GitHub, this repository includes a 50k-row sample of the VAERS dataset with all models trained on it.
 The original project was built on the complete 1.2M+ records.
 
-⚙️ Workflow
+### ⚙️ Workflow
 🗂️ Data Preparation
 
 Cleaned VAERS dataset
