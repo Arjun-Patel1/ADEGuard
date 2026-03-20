@@ -1,9 +1,0 @@
-gradio==5.46.1
-pandas
-numpy
-scikit-learn
-joblib
-sentence-transformers
-torch>=2.2.0
-requests
-plotly
